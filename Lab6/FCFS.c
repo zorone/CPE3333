@@ -1,5 +1,7 @@
 /* A program to simulate the FCFS CPU scheduling algorithm */
 #include<stdio.h>
+#include<string.h>
+
 int main()
 {
 	char pn[10][10];
@@ -32,8 +34,9 @@ int main()
 	printf("\n%-8s%-8s%-8s%-8s%-8s%-8s", "PName", "Arrtime", "Burtime", "Start", "TAT", "Finish");
 	for(i=0;i<n;i++)
 	{
-		char* tempStr = strcpy(pn[i]);
-		snprintf(tempStr, "%-8s", tempStr);
+		char[20] tempStr;
+		strcpy(tempStr, pn[i]);
+		sprintf(tempStr, "%-8s", tempStr);
 		strcat(tempStr, arr[i]);
 		printf("\n%-16s%8d%8d%8d%8d",  tempStr, bur[i], star[i], tat[i], finish[i]);
 	totwt += wt[i];
