@@ -32,7 +32,9 @@ int main()
 	printf("\n%-8s%-8s%-8s%-8s%-8s%-8s", "PName", "Arrtime", "Burtime", "Start", "TAT", "Finish");
 	for(i=0;i<n;i++)
 	{
-		printf("\n%-8s %8d%8d%8d%8d%8d", pn[i], arr[i], bur[i], star[i], tat[i], finish[i]);
+		char* tempStr = strcpy(pn[i]);
+		strcat(tempStr, arr[i]);
+		printf("\n%-16s%8d%8d%8d%8d",  bur[i], star[i], tat[i], finish[i]);
 	totwt += wt[i];
 	tottat += tat[i];
 	}
