@@ -33,8 +33,9 @@ int main()
 	for(i=0;i<n;i++)
 	{
 		char* tempStr = strcpy(pn[i]);
+		snprintf(tempStr, "%-8s", tempStr);
 		strcat(tempStr, arr[i]);
-		printf("\n%-16s%8d%8d%8d%8d",  bur[i], star[i], tat[i], finish[i]);
+		printf("\n%-16s%8d%8d%8d%8d",  tempStr, bur[i], star[i], tat[i], finish[i]);
 	totwt += wt[i];
 	tottat += tat[i];
 	}
