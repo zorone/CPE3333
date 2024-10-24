@@ -34,10 +34,11 @@ int main()
 	printf("\n%-8s%-8s%-8s%-8s%-8s%-8s", "PName", "Arrtime", "Burtime", "Start", "TAT", "Finish");
 	for(i=0;i<n;i++)
 	{
-		char[20] tempStr;
+		char tempStr[20], tempStrConvert[10];
 		strcpy(tempStr, pn[i]);
 		sprintf(tempStr, "%-8s", tempStr);
-		strcat(tempStr, arr[i]);
+		sprintf(tempStr, "%d", arr[i]);
+		strcat(tempStr, tempStrConvert);
 		printf("\n%-16s%8d%8d%8d%8d",  tempStr, bur[i], star[i], tat[i], finish[i]);
 	totwt += wt[i];
 	tottat += tat[i];
