@@ -7,11 +7,11 @@ int main()
 	char pn[10][10];
 	int arr[10], bur[10], star[10], finish[10], tat[10], wt[10], i, n;
 	double totwt = 0, tottat = 0;
-	printf("Enter the number of processes:");
+	printf("Enter the number of processes: ");
 	scanf("%d", &n);
 	for(i = 0; i < n; i++)
 	{
-		printf("Enter the Process Name, Arrival Time & Burst Time:");
+		printf("Enter the Process Name, Arrival Time & Burst Time: ");
 		scanf("%s%d%d", pn[i], &arr[i], &bur[i]);
 	}
 	for(i = 0; i < n; i++)
