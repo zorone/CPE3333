@@ -5,7 +5,7 @@
 int main()
 {
 	int i = 0, j, n;
-	int pno[10], bt[10], wt[10], temp = 0, tt[10];
+	int pno[10], bt[10], wt[10], tt[10], temp = 0;
 	float sum, at;
 	printf("\n Enter the no of process: ");
 	scanf("%d", &n);
