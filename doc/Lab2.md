@@ -1,4 +1,4 @@
-# Lab 2a
+# Lab 2
 
 > [!NOTE]
 > This document doesn't yet finish.
