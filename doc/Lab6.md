@@ -58,8 +58,7 @@ int main()
 
 ### explaination
 
-At line:
-> This section is about getting the inputs from the user
+At line 10 - 16:
 
 ```c
     printf("Enter the number of processes: ");
@@ -71,7 +70,29 @@ At line:
     }
 ```
 
-At line:
+> This section is about getting the inputs from the user
+
+```c
+    for(i = 0; i < n; i++)
+    {
+        if(i == 0)
+        {
+            star[i] = arr[i];
+            wt[i] = star[i] - arr[i];
+            finish[i] = star[i] + bur[i];
+            tat[i] = finish[i] - arr[i];
+        }
+        else
+        {
+            star[i] = finish[i-1];
+            wt[i] = star[i] - arr[i];
+            finish[i] = star[i] + bur[i];
+            tat[i] = finish[i] - arr[i];
+        }
+    }
+```
+
+At line 17 - 33:
 > This section is about calculating the CPU time of each process.
 >
 > Let's explain the variable first.
@@ -98,28 +119,7 @@ At line:
 >   - `finishing time` is the point after `starting time`, with the length of `bursting time`
 >   - `Turn Around time`, in this code, is the time from `arriving time` to `finishing time`. which is the same length as the time from `arriving time`, to `waiting time`, and then to `bursting time`
 
-```c
-    for(i = 0; i < n; i++)
-    {
-        if(i == 0)
-        {
-            star[i] = arr[i];
-            wt[i] = star[i] - arr[i];
-            finish[i] = star[i] + bur[i];
-            tat[i] = finish[i] - arr[i];
-        }
-        else
-        {
-            star[i] = finish[i-1];
-            wt[i] = star[i] - arr[i];
-            finish[i] = star[i] + bur[i];
-            tat[i] = finish[i] - arr[i];
-        }
-    }
-```
-
-At line:
-> Show the result, iterate over each and every process the user give.
+At line 34 - 42:
 
 ```c
     printf("\n%-8s%-8s%-8s%-8s%-8s%-8s", 
@@ -132,6 +132,8 @@ At line:
     printf("\nAverage Waiting time: %lf", totwt/n);
     printf("\nAverage Turn Around Time: %lf", tottat/n);
 ```
+
+> Show the result, iterate over each and every process the user give.
 
 SJF.c
 ![SJF.c](https://github.com/zorone/CPE3333/blob/master/res/Screenshot%20from%202024-10-25%2020-29-11.png?raw=true "SJF.c")
