@@ -72,6 +72,8 @@ At line 10 - 16:
 
 > This section is about getting the inputs from the user
 
+At line 17 - 33:
+
 ```c
     for(i = 0; i < n; i++)
     {
@@ -92,7 +94,6 @@ At line 10 - 16:
     }
 ```
 
-At line 17 - 33:
 > This section is about calculating the CPU time of each process.
 >
 > Let's explain the variable first.
