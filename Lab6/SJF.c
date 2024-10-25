@@ -1,7 +1,8 @@
 /* A program to simulate the SJF CPU scheduling algorithm */
 #include<stdio.h>
 #include<string.h>
-main()
+
+int main()
 {
 	int i=0,pno[10],bt[10],n,wt[10],temp=0,j,tt[10];
 	float sum,at;
@@ -34,13 +35,16 @@ main()
 		wt[i]=bt[i-1]+wt[i-1];
 		sum=sum+wt[i];
 	}
-	printf("\n process no \t burst time\t waiting time \t turn around time\n");
+	printf("\n %-16s%-16s%-16s%-16s", "process no", "burst time", "waiting time", "turn around time");
 	for(i=0;i<n;i++)
 	{
 	tt[i]=bt[i]+wt[i];
 	at+=tt[i];
-		printf("\n p%d\t\t%d\t\t%d\t\t%d",i,bt[i],wt[i],tt[i]);
+		printf("\n p%-15d%-16d%-16d%-16d", i, bt[i], wt[i], tt[i]);
 	}
-	printf("\n\n\t Average waiting time%f\n\t Average turn around time%f",sum,at);
+	printf("\n\n\t Average waiting time: %f", sum/n);
+	printf("\n\t Average turn around time: %f", at);
+
+	return 0;
 }
 

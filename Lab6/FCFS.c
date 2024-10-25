@@ -34,26 +34,27 @@ int main()
 	printf("\n%-8s%-8s%-8s%-8s%-8s%-8s", "PName", "Arrtime", "Burtime", "Start", "TAT", "Finish");
 	for(i=0;i<n;i++)
 	{
-		char tempStr[60], tempStrConvert[10];
-		strcpy(tempStr, pn[i]);
-		sprintf(tempStr, "%-8s", tempStr);
-		sprintf(tempStrConvert, "%d", arr[i]);
-		strcat(tempStr, tempStrConvert);
-		sprintf(tempStr, "%-16s", tempStr);
-		sprintf(tempStrConvert, "%d", bur[i]);
-		strcat(tempStr, tempStrConvert);
-		sprintf(tempStr, "%-24s", tempStr);
-		sprintf(tempStrConvert, "%d", star[i]);
-		strcat(tempStr, tempStrConvert);
-		sprintf(tempStr, "%-32s", tempStr);
-		sprintf(tempStrConvert, "%d", tat[i]);
-		strcat(tempStr, tempStrConvert);
-		sprintf(tempStr, "%-40s", tempStr);
-		sprintf(tempStrConvert, "%d", finish[i]);
-		strcat(tempStr, tempStrConvert);
-		printf("\n%s",  tempStr);
-	totwt += wt[i];
-	tottat += tat[i];
+		printf("%-8s%-8d%-8d%-8d%-8d%-8d%-8d", pn[i], arr[i], bur[i], star[i], tat[i], finish[i]);
+		// char tempStr[60], tempStrConvert[10];
+		// strcpy(tempStr, pn[i]);
+		// sprintf(tempStr, "%-8s", tempStr);
+		// sprintf(tempStrConvert, "%d", arr[i]);
+		// strcat(tempStr, tempStrConvert);
+		// sprintf(tempStr, "%-16s", tempStr);
+		// sprintf(tempStrConvert, "%d", bur[i]);
+		// strcat(tempStr, tempStrConvert);
+		// sprintf(tempStr, "%-24s", tempStr);
+		// sprintf(tempStrConvert, "%d", star[i]);
+		// strcat(tempStr, tempStrConvert);
+		// sprintf(tempStr, "%-32s", tempStr);
+		// sprintf(tempStrConvert, "%d", tat[i]);
+		// strcat(tempStr, tempStrConvert);
+		// sprintf(tempStr, "%-40s", tempStr);
+		// sprintf(tempStrConvert, "%d", finish[i]);
+		// strcat(tempStr, tempStrConvert);
+		// printf("\n%s", tempStr);
+		// totwt += wt[i];
+		// tottat += tat[i];
 	}
 	printf("\nAverage Waiting time: %lf", totwt/n);
 	printf("\nAverage Turn Around Time: %lf", tottat/n);
